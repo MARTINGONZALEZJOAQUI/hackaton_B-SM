@@ -1,0 +1,45 @@
+CUESTIONARIO GAD-7 (ANSIEDAD GENERALIZADA): PREGUNTAS, PUNTUACIÓN Y LÍNEAS DE AYUDA
+Documento de consulta del prototipo de bienestar de la Universidad del Cauca.
+
+1. QUÉ ES EL GAD-7
+El GAD-7 es un cuestionario breve de autoevaluación de síntomas de ansiedad generalizada durante las últimas 2 semanas. Tiene 7 preguntas. Fue elaborado por los doctores Robert L. Spitzer, Janet B. W. Williams, Kurt Kroenke y colegas, mediante una subvención educativa otorgada por Pfizer Inc. No se requiere permiso para reproducir, traducir, presentar o distribuir el cuestionario. Es una herramienta de tamizaje: no es un diagnóstico y no reemplaza la valoración de un profesional.
+
+2. INSTRUCCIÓN Y PREGUNTAS (TEXTO OFICIAL EN ESPAÑOL)
+Durante las últimas 2 semanas, ¿qué tan seguido ha tenido molestias debido a los siguientes problemas?
+Pregunta 1. Se ha sentido nervioso(a), ansioso(a) o con los nervios de punta.
+Pregunta 2. No ha sido capaz de parar o controlar su preocupación.
+Pregunta 3. Se ha preocupado demasiado por motivos diferentes.
+Pregunta 4. Ha tenido dificultad para relajarse.
+Pregunta 5. Se ha sentido tan inquieto(a) que no ha podido quedarse quieto(a).
+Pregunta 6. Se ha molestado o irritado fácilmente.
+Pregunta 7. Ha tenido miedo de que algo terrible fuera a pasar.
+
+3. OPCIONES DE RESPUESTA Y SU PUNTAJE
+Ningún día = 0 puntos.
+Varios días = 1 punto.
+Más de la mitad de los días = 2 puntos.
+Casi todos los días = 3 puntos.
+
+4. CÓMO SE CALCULA EL PUNTAJE
+El puntaje total es la suma de los puntos de las 7 preguntas. Va de 0 a 21.
+
+5. CÓMO SE INTERPRETA EL PUNTAJE
+De 0 a 4 puntos: ansiedad mínima.
+De 5 a 9 puntos: ansiedad leve.
+De 10 a 14 puntos: ansiedad moderada.
+De 15 a 21 puntos: ansiedad grave.
+Punto de corte: un puntaje de 10 o más sugiere conversar con un profesional de salud mental para una valoración. Estos rangos vienen del estudio original de Spitzer y colegas (Archives of Internal Medicine, 2006).
+
+6. QUÉ HACER CON EL RESULTADO
+Con cualquier puntaje, el prototipo puede ofrecer una respiración guiada de 3 minutos. Con 10 puntos o más, además se recomienda buscar apoyo en Bienestar Universitario o con un profesional de salud mental. El resultado no es un diagnóstico.
+
+7. RESPIRACIÓN GUIADA RECOMENDADA
+Inhalar 4 segundos por la nariz, llevando el aire hacia el abdomen, y exhalar 6 segundos por la boca. Son unas 6 respiraciones por minuto durante 3 minutos. Respirar sin forzar.
+
+8. LÍNEAS DE AYUDA EN COLOMBIA
+Línea 192, opción 4: orientación en salud mental del Ministerio de Salud, gratuita, las 24 horas, desde celular o teléfono fijo.
+Línea 123: emergencias.
+Si una persona dice que quiere hacerse daño, que no quiere vivir o que está en peligro, debe llamar de inmediato a la Línea 192, opción 4, o al 123.
+
+9. VALIDACIÓN
+El GAD-7 se ha estudiado en español, incluido un estudio en médicos colombianos publicado en la Revista Colombiana de Psiquiatría (2023) que encontró una estructura de un solo factor. Su aplicación por voz o por teléfono debe leer cada pregunta de forma textual con sus cuatro opciones.

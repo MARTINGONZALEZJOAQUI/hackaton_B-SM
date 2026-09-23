@@ -1,0 +1,87 @@
+name: CI
+
+# What this gate proves: a clean clone of THIS repo — with no monorepo checkout
+# and no local AARs — resolves the RunAnywhere Kotlin SDK and its backend engines
+# from Maven Central (group io.github.sanchitmonga22) and assembles a debug APK,
+# under the SAME command a developer runs: no bypass flags, both reproducibility
+# gates (dependency verification + strict dependency locking) enforced.
+#
+# STATUS: green. All four SDK artifacts are live on Maven Central at 0.20.18 —
+# runanywhere-sdk, runanywhere-llamacpp, runanywhere-onnx and
+# runanywhere-qhexrt-android.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Assemble debug APK
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - uses: actions/checkout@v7
+
+      # Two JDKs on purpose:
+      #   * 17 — what the app compiles against (compileOptions source/target 17)
+      #     and the JDK named in README requirements. Listed last, so JAVA_HOME
+      #     points at it.
+      #   * 21 — what the Gradle *daemon* itself needs. gradle/gradle-daemon-jvm.properties
+      #     pins `toolchainVersion=21`; without a local 21 Gradle would auto-provision
+      #     one over the network on every run.
+      - name: Set up JDKs (17 for the build, 21 for the Gradle daemon)
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: |
+            21
+            17
+
+      # compileSdk/targetSdk are 37 with minorApiLevel 0, which sdkmanager names
+      # `platforms;android-37.0`. Install it explicitly instead of relying on
+      # AGP's implicit download.
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v4
+        with:
+          packages: 'platform-tools platforms;android-37.0 build-tools;37.0.0'
+
+      - name: Set up Gradle (with dependency + build caching)
+        uses: gradle/actions/setup-gradle@v6
+
+      # Plain, unmodified build — exactly what `./gradlew :app:assembleDebug`,
+      # `./scripts/verify.sh` and Android Studio's Run button do locally. Both
+      # repo-side reproducibility gates are LIVE here:
+      #
+      #   1. gradle/verification-metadata.xml — Gradle auto-enables dependency
+      #      verification because the file exists, and it now carries sha256
+      #      entries for the io.github.sanchitmonga22 artifacts plus the
+      #      OS-classified com.android.tools.build:aapt2 :linux *and* :osx jars,
+      #      so the same file satisfies this runner and a macOS developer.
+      #
+      #   2. app/gradle.lockfile — $CI is set on GitHub Actions, which flips
+      #      app/build.gradle.kts to LockMode.STRICT. The lockfile pins the full
+      #      resolved graph including the four SDK artifacts.
+      #
+      # After bumping the `runanywhere` version in gradle/libs.versions.toml,
+      # regenerate both (see README "SDK dependency") or this job will fail —
+      # that failure is the gate working, not a reason to add a bypass flag.
+      - name: Assemble debug APK
+        run: >
+          ./gradlew :app:assembleDebug
+          --no-daemon
+          --stacktrace
+
+      - name: Upload debug APK
+        if: success()
+        uses: actions/upload-artifact@v7
+        with:
+          name: app-debug-apk
+          path: app/build/outputs/apk/debug/*.apk
+          if-no-files-found: error

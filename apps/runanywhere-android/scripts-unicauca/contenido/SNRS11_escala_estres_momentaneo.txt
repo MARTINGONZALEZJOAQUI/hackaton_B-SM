@@ -1,0 +1,20 @@
+ESCALA NUMÉRICA DE ESTRÉS MOMENTÁNEO (SNRS-11)
+Documento de consulta del prototipo de bienestar de la Universidad del Cauca.
+
+1. QUÉ ES
+La SNRS-11 (Stress Numerical Rating Scale-11) es una pregunta única para medir el estrés que la persona siente en este momento, con un número de 0 a 10. Su validación inicial se publicó en tres estudios con adolescentes y adultos (Karvounides y colegas, 2016), donde se comparó con la Escala de Estrés Percibido (PSS) y otras medidas. Mide el estrés del momento, a diferencia del GAD-7, que mira las últimas 2 semanas.
+
+2. PREGUNTA
+En una escala de 0 a 10, donde 0 es sin estrés y 10 es el mayor estrés posible, ¿cuánto estrés siente en este momento?
+
+3. CÓMO SE USA EN EL PROTOTIPO
+Es la primera pregunta del Test por voz, antes del GAD-7. El número se registra tal cual, sin calcular nada más.
+
+4. INTERPRETACIÓN
+La SNRS-11 no tiene un punto de corte clínico validado. En el prototipo, un valor de 7 o más se usa solo para recomendar la respiración guiada, que es una técnica de bajo riesgo. Ese umbral es una decisión del equipo y no un criterio clínico.
+
+5. NOTA SOBRE LA TRADUCCIÓN
+Las anclas originales en inglés son "No stress" (0) y "Highest stress possible" (10). La versión en español del prototipo es una traducción directa sin validación formal propia.
+
+6. OTRA ESCALA PARA EL PROTOTIPO FORMAL: PSS-10
+Para medir estrés percibido en el último mes, la escala de referencia es la PSS-10 (Cohen). Está validada en universitarias de Bogotá (consistencia interna 0,86) y en estudiantes de medicina de Bucaramanga. Su uso académico es gratuito, pero hay que registrar la solicitud en la plataforma ePROVIDE de Mapi Research Trust. No tiene puntos de corte: se reporta el puntaje y se compara con el historial de la misma persona. Sus preguntas no se incluyen aquí hasta tener ese registro.

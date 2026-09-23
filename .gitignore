@@ -1,10 +1,10 @@
 
-categoria-1/
-categoria-2/
-categoria-3/
-categoria-4/
-docs/
-pitch/
+/categoria-1/
+/categoria-2/
+/categoria-3/
+/categoria-4/
+/docs/
+/pitch/
 
 
 *.apk
@@ -12,7 +12,7 @@ pitch/
 .gradle/
 build/
 local.properties
-.idea/
+/.idea/
 
 
 node_modules/
